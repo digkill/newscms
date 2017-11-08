@@ -9,33 +9,24 @@ nbproject
 .project
 .settings
 
-<<<<<<< HEAD
 # sublime text project / workspace files
 *.sublime-project
 *.sublime-workspace
 
-=======
->>>>>>> ebc909cef1aa3ac8ddfccc4ee1bdcd6ccead24e3
 # windows thumbnail cache
 Thumbs.db
 
 # composer vendor dir
 /vendor
-<<<<<<< HEAD
 # cubrid install dir
 /cubrid
-=======
->>>>>>> ebc909cef1aa3ac8ddfccc4ee1bdcd6ccead24e3
 
 # composer itself is not needed
 composer.phar
 
-<<<<<<< HEAD
 # composer.lock in applications is ignored since it's automatically created by composer when application is installed
 /apps/*/composer.lock
 
-=======
->>>>>>> ebc909cef1aa3ac8ddfccc4ee1bdcd6ccead24e3
 # Mac DS_Store Files
 .DS_Store
 
@@ -44,7 +35,6 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
-<<<<<<< HEAD
 # ignore dev installed apps and extensions
 /apps
 /extensions
@@ -52,7 +42,9 @@ phpunit.phar
 # NPM packages
 /node_modules
 .env
-=======
+
 tests/_output/*
 tests/_support/_generated
->>>>>>> ebc909cef1aa3ac8ddfccc4ee1bdcd6ccead24e3
+
+/db.php
+*-local.php
