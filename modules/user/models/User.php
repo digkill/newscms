@@ -25,6 +25,16 @@ use yii\web\IdentityInterface;
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
+
+    const SCENARIO_PROFILE = 'profile';
+
+    public function scenarios()
+    {
+        return ArrayHelper::merge(parent::scenarios(), [
+            self::SCENARIO_PROFILE => ['email'],
+        ]);
+    }
+
     const STATUS_BLOCKED = 0;
     const STATUS_ACTIVE = 1;
     const STATUS_WAIT = 2;
@@ -106,6 +116,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
+
         return Yii::$app->security->validatePassword($password, $this->password_hash);
     }
 

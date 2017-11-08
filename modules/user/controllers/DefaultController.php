@@ -54,6 +54,11 @@ class DefaultController extends Controller
         ];
     }
 
+    public function actionIndex()
+    {
+        return $this->redirect(['profile/index'], 301);
+    }
+
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -111,7 +116,7 @@ class DefaultController extends Controller
 
     public function actionPasswordResetRequest()
     {
-        $model = new PasswordResetRequestForm();
+        $model = new PasswordResetRequestForm($this->module->passwordResetTokenExpire);
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->getSession()->setFlash('success', 'Спасибо! На ваш Email было отправлено письмо со ссылкой на восстановление пароля.');

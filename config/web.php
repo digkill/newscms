@@ -4,7 +4,9 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
+    'name' => 'newsCMS',
     'id' => 'basic',
+    'language' => 'ru-RU',
     'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -21,23 +23,23 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'pp\modules\user\models\User',
+            'identityClass' => 'app\modules\user\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => ['user/default/login'],
         ],
         'errorHandler' => [
-            'errorAction' => 'main/default/error',
+            //'errorAction' => 'main/default/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mail to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
-                'username' => 'vitl11@yandex.ru',
+                'username' => 'vitl11',
                 'password' => '%Nlwg43wd@S1h4sr39@',
                 'port' => '465',
                 'encryption' => 'ssl',
@@ -53,7 +55,6 @@ $config = [
             ],
         ],
         'db' => $db,
-
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -68,7 +69,14 @@ $config = [
                 '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
             ],
         ],
-
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'forceTranslation' => true,
+                ],
+            ],
+        ],
     ],
     'modules' => [
         'main' => [
@@ -76,6 +84,9 @@ $config = [
         ],
         'user' => [
             'class' => 'app\modules\user\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
         ],
     ],
     'params' => $params,
