@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use app\modules\admin\models\User;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\admin\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -32,10 +34,17 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'email_confirm_token:email',
             // 'password_hash',
             // 'password_reset_token',
-            // 'email:email',
-            // 'status',
+             'email:email',
+            [
+                'class' => UserStatusColumn::className(),
+                'filter' => User::getStatusesArray(),
+                'attribute' => 'status',
+            ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; letter-spacing: 0.1em; max-width: 7em;'],
+            ],
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>
