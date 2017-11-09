@@ -45,7 +45,7 @@ use yii\mail\MailerInterface;
 class EmailTarget extends Target
 {
     /**
-     * @var array the configuration array for creating a [[\yii\mail\MessageInterface|message]] object.
+     * @var array the configuration array for creating a [[\yii\mails\MessageInterface|message]] object.
      * Note that the "to" option must be set, which specifies the destination email address(es).
      */
     public $message = [];
@@ -86,7 +86,7 @@ class EmailTarget extends Target
     }
 
     /**
-     * Composes a mail message with the given body content.
+     * Composes a mails message with the given body content.
      * @param string $body the body content
      * @return \yii\mail\MessageInterface $message
      */

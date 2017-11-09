@@ -1,5 +1,5 @@
 <?php
-namespace app\modules\user\models;
+namespace app\modules\user\forms;
 use app\modules\user\models\User;
 use app\modules\user\Module;
 use yii\base\Model;
@@ -10,8 +10,8 @@ use Yii;
 class PasswordResetRequestForm extends Model
 {
     public $email;
-    private $_user = false;
-    private $_timeout;
+    private $user = false;
+    private $timeout;
     /**
      * PasswordResetRequestForm constructor.
      * @param integer $timeout
@@ -19,7 +19,7 @@ class PasswordResetRequestForm extends Model
      */
     public function __construct($timeout, $config = [])
     {
-        $this->_timeout = $timeout;
+        $this->timeout = $timeout;
         parent::__construct($config);
     }
     /**
@@ -55,7 +55,7 @@ class PasswordResetRequestForm extends Model
     public function validateIsSent($attribute, $params)
     {
         if (!$this->hasErrors() && $user = $this->getUser()) {
-            if (User::isPasswordResetTokenValid($user->$attribute, $this->_timeout)) {
+            if (User::isPasswordResetTokenValid($user->$attribute, $this->timeout)) {
                 $this->addError($attribute, Module::t('module', 'ERROR_TOKEN_IS_SENT'));
             }
         }
@@ -86,12 +86,12 @@ class PasswordResetRequestForm extends Model
      */
     public function getUser()
     {
-        if ($this->_user === false) {
-            $this->_user = User::findOne([
+        if ($this->user === false) {
+            $this->user = User::findOne([
                 'email' => $this->email,
                 'status' => User::STATUS_ACTIVE,
             ]);
         }
-        return $this->_user;
+        return $this->user;
     }
 }

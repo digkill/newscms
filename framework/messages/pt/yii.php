@@ -64,7 +64,7 @@ return [
     '{attribute} cannot be blank.' => '“{attribute}” não pode ficar em branco.',
     '{attribute} is invalid.' => '“{attribute}” é inválido.',
     '{attribute} is not a valid URL.' => '“{attribute}” não é uma URL válida.',
-    '{attribute} is not a valid email address.' => '“{attribute}” não é um endereço de e-mail válido.',
+    '{attribute} is not a valid email address.' => '“{attribute}” não é um endereço de e-mails válido.',
     '{attribute} must be "{requiredValue}".' => '“{attribute}” deve ser “{requiredValue}”.',
     '{attribute} must be a number.' => '“{attribute}” deve ser um número.',
     '{attribute} must be a string.' => '“{attribute}” deve ser uma string.',

@@ -12,7 +12,7 @@ use yii\console\controllers\HelpController;
 /**
  * UnknownCommandException represents an exception caused by incorrect usage of a console command.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0.11
  */
 class UnknownCommandException extends Exception

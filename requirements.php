@@ -139,11 +139,11 @@ $requirements = array(
         'memo' => '"allow_url_include" should be disabled at php.ini',
     ),
     'phpSmtp' => array(
-        'name' => 'PHP mail SMTP',
+        'name' => 'PHP mails SMTP',
         'mandatory' => false,
         'condition' => strlen(ini_get('SMTP')) > 0,
         'by' => 'Email sending',
-        'memo' => 'PHP mail SMTP server required',
+        'memo' => 'PHP mails SMTP server required',
     ),
 );
 

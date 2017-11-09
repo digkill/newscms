@@ -42,7 +42,7 @@ use yii\web\MethodNotAllowedHttpException;
  * ```
  *
  * @see https://tools.ietf.org/html/rfc2616#section-14.7
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class VerbFilter extends Behavior

@@ -142,9 +142,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
      * @param string $token password reset token
      * @return static|null
      */
-    public static function findByPasswordResetToken($token)
+    public static function findByPasswordResetToken($token, $timeout)
     {
-        if (!static::isPasswordResetTokenValid($token)) {
+        if (!static::isPasswordResetTokenValid($token, $timeout)) {
             return null;
         }
         return static::findOne([
@@ -159,15 +159,14 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
      * @param string $token password reset token
      * @return boolean
      */
-    public static function isPasswordResetTokenValid($token)
+    public static function isPasswordResetTokenValid($token, $timeout)
     {
         if (empty($token)) {
             return false;
         }
-        $expire = Yii::$app->params['user.passwordResetTokenExpire'];
         $parts = explode('_', $token);
         $timestamp = (int) end($parts);
-        return $timestamp + $expire >= time();
+        return $timestamp + $timeout >= time();
     }
 
     /**

@@ -17,7 +17,7 @@ namespace yii\db;
  * A class implementing this interface should also use [[ActiveQueryTrait]] and [[ActiveRelationTrait]].
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 interface ActiveQueryInterface extends QueryInterface

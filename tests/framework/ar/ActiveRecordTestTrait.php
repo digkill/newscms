@@ -1073,7 +1073,7 @@ trait ActiveRecordTestTrait
         /* @var $this TestCase|ActiveRecordTestTrait */
         $customer = new $customerClass();
         $customer->name = 'boolean customer';
-        $customer->email = 'mail@example.com';
+        $customer->email = 'mails@example.com';
         $customer->status = true;
         $customer->save(false);
 

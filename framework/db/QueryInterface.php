@@ -17,7 +17,7 @@ namespace yii\db;
  * Sorting is supported via [[orderBy]] and items can be limited to match some conditions using [[where]].
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 interface QueryInterface

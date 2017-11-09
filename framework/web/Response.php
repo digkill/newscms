@@ -56,7 +56,7 @@ use yii\helpers\Url;
  * @property \Exception|\Error $statusCodeByException The exception object. This property is write-only.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Response extends \yii\base\Response

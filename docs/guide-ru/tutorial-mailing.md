@@ -91,7 +91,7 @@ use yii\helpers\Url;
 
 
 /* @var $this \yii\web\View view component instance */
-/* @var $message \yii\mail\BaseMessage instance of newly created mail message */
+/* @var $message \yii\mail\BaseMessage instance of newly created mails message */
 
 ?>
 <h2>This message allows you to visit our site home page by one click</h2>

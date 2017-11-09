@@ -20,7 +20,7 @@ use yii\base\Event;
 class MailEvent extends Event
 {
     /**
-     * @var \yii\mail\MessageInterface the mail message being send.
+     * @var \yii\mail\MessageInterface the mails message being send.
      */
     public $message;
     /**
@@ -29,7 +29,7 @@ class MailEvent extends Event
     public $isSuccessful;
     /**
      * @var bool whether to continue sending an email. Event handlers of
-     * [[\yii\mail\BaseMailer::EVENT_BEFORE_SEND]] may set this property to decide whether
+     * [[\yii\mails\BaseMailer::EVENT_BEFORE_SEND]] may set this property to decide whether
      * to continue send or not.
      */
     public $isValid = true;

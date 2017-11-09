@@ -52,7 +52,7 @@ return [
     'FLASH_EMAIL_CONFIRM_REQUEST' => 'Please confirm your Email.',
     'FLASH_EMAIL_CONFIRM_SUCCESS' => 'Thanks! Your Email is confirmed.',
     'FLASH_EMAIL_CONFIRM_ERROR' => 'Email confirmation error.',
-    'FLASH_PASSWORD_RESET_REQUEST' => 'Follow the link on mail to reset your password.',
+    'FLASH_PASSWORD_RESET_REQUEST' => 'Follow the link on mails to reset your password.',
     'FLASH_PASSWORD_RESET_SUCCESS' => 'Thanks! Your passwords is changed.',
     'FLASH_PASSWORD_RESET_ERROR' => 'Error! Email confirm is not sent.',
     'FLASH_PASSWORD_CHANGE_SUCCESS' => 'Your passwords is changed.',
@@ -67,5 +67,5 @@ return [
     'HELLO {username}' => 'Hello, {username}!',
     'FOLLOW_TO_RESET_PASSWORD' => 'Follow the link below to reset your password:',
     'FOLLOW_TO_CONFIRM_EMAIL' => 'Follow the link below to confirm your email:',
-    'IGNORE_IF_DO_NOT_REGISTER' => 'If you do not register on our site just remove this mail.'
+    'IGNORE_IF_DO_NOT_REGISTER' => 'If you do not register on our site just remove this mails.'
 ];

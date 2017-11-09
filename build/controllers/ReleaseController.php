@@ -37,7 +37,7 @@ use yii\helpers\FileHelper;
  *
  * Be sure to check the help info for individual sub-commands:
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class ReleaseController extends Controller

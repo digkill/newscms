@@ -19,7 +19,7 @@ namespace yii\caching;
  *
  * For more details and usage information on Cache, see the [guide article on caching](guide:caching-overview).
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class ArrayCache extends Cache

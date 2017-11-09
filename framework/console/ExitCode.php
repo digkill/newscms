@@ -60,12 +60,12 @@ class ExitCode
      */
     const NOINPUT = 66;
     /**
-     * The user specified did not exist.  This might be used for mail addresses
+     * The user specified did not exist.  This might be used for mails addresses
      * or remote logins.
      */
     const NOUSER = 67;
     /**
-     * The host specified did not exist.  This is used in mail addresses or
+     * The host specified did not exist.  This is used in mails addresses or
      * network requests.
      */
     const NOHOST = 68;

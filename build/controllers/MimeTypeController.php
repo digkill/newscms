@@ -21,7 +21,7 @@ use yii\helpers\VarDumper;
  * This file has been placed in the public domain for unlimited redistribution,
  * so we can use it and ship it with Yii.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class MimeTypeController extends Controller

@@ -43,7 +43,7 @@ use yii\base\InvalidConfigException;
  * @property string[] $tablesUsedInFrom Table names indexed by aliases. This property is read-only.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Query extends Component implements QueryInterface

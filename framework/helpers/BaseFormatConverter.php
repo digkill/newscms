@@ -15,7 +15,7 @@ use Yii;
  *
  * Do not use BaseFormatConverter. Use [[FormatConverter]] instead.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @author Enrica Ruedin <e.ruedin@guggach.com>
  * @since 2.0
  */

@@ -18,7 +18,7 @@ use yii\helpers\Console;
  *
  * Based on [cebe/markdown](https://github.com/cebe/markdown).
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Markdown extends \cebe\markdown\Parser

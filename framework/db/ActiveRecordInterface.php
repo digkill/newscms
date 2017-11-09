@@ -13,7 +13,7 @@ use yii\base\StaticInstanceInterface;
  * ActiveRecordInterface.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 interface ActiveRecordInterface extends StaticInstanceInterface

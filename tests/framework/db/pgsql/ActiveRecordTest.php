@@ -29,7 +29,7 @@ class ActiveRecordTest extends \yiiunit\framework\db\ActiveRecordTest
         /* @var $this TestCase|ActiveRecordTestTrait */
         $customer = new $customerClass();
         $customer->name = 'boolean customer';
-        $customer->email = 'mail@example.com';
+        $customer->email = 'mails@example.com';
         $customer->bool_status = false;
         $customer->save(false);
 

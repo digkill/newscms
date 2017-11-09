@@ -29,7 +29,7 @@ use yii\helpers\FormatConverter;
  * [[timestampAttributeTimeZone]] are the same.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class DateValidator extends Validator

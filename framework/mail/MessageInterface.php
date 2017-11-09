@@ -8,12 +8,12 @@
 namespace yii\mail;
 
 /**
- * MessageInterface is the interface that should be implemented by mail message classes.
+ * MessageInterface is the interface that should be implemented by mails message classes.
  *
  * A message represents the settings and content of an email, such as the sender, recipient,
  * subject, body, etc.
  *
- * Messages are sent by a [[\yii\mail\MailerInterface|mailer]], like the following,
+ * Messages are sent by a [[\yii\mails\MailerInterface|mailer]], like the following,
  *
  * ```php
  * Yii::$app->mailer->compose()
@@ -205,7 +205,7 @@ interface MessageInterface
     /**
      * Sends this email message.
      * @param MailerInterface $mailer the mailer that should be used to send this message.
-     * If null, the "mail" application component will be used instead.
+     * If null, the "mails" application component will be used instead.
      * @return bool whether this message is sent successfully.
      */
     public function send(MailerInterface $mailer = null);

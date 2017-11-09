@@ -16,6 +16,9 @@ use Yii;
 
 class DefaultController extends Controller
 {
+
+    public $module;
+
     public function behaviors()
     {
         return [
@@ -135,7 +138,7 @@ class DefaultController extends Controller
     public function actionPasswordReset($token)
     {
         try {
-            $model = new PasswordResetForm($token);
+            $model = new PasswordResetForm($token, $this->module->passwordResetTokenExpire);
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }

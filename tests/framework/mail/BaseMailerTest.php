@@ -15,7 +15,7 @@ use yii\mail\BaseMessage;
 use yiiunit\TestCase;
 
 /**
- * @group mail
+ * @group mails
  */
 class BaseMailerTest extends TestCase
 {
@@ -278,9 +278,9 @@ TEXT
     {
         $mailer = new Mailer();
         $this->assertFalse($mailer->useFileTransport);
-        $this->assertEquals('@runtime/mail', $mailer->fileTransportPath);
+        $this->assertEquals('@runtime/mails', $mailer->fileTransportPath);
 
-        $mailer->fileTransportPath = '@yiiunit/runtime/mail';
+        $mailer->fileTransportPath = '@yiiunit/runtime/mails';
         $mailer->useFileTransport = true;
         $mailer->fileTransportCallback = function () {
             return 'message.txt';

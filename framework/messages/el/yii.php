@@ -84,7 +84,7 @@ return [
     '{attribute} contains wrong subnet mask.' => 'Το {attribute} περιέχει λάθος μάσκα υποδικτύου.',
     '{attribute} is invalid.' => 'Το «{attribute}» δεν είναι έγκυρο.',
     '{attribute} is not a valid URL.' => 'Το «{attribute}» δεν είναι έγκυρη διεύθυνση URL.',
-    '{attribute} is not a valid email address.' => 'Το «{attribute}» δεν είναι έγκυρη διεύθυνση e-mail.',
+    '{attribute} is not a valid email address.' => 'Το «{attribute}» δεν είναι έγκυρη διεύθυνση e-mails.',
     '{attribute} is not in the allowed range.' => 'Το {attribute} δεν είναι στο επιτρεπόμενο εύρος.',
     '{attribute} must be "{requiredValue}".' => 'Το «{attribute}» πρέπει να είναι «{requiredValue}».',
     '{attribute} must be a number.' => 'Το «{attribute}» πρέπει να είναι αριθμός.',

@@ -40,7 +40,7 @@ use yii\base\NotSupportedException;
  * @property string $errorMessage Description of the last error. This property is read-only.
  *
  * @author Alexander Makarov <sam@rmcreative.ru>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class MessageFormatter extends Component

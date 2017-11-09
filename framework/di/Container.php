@@ -199,7 +199,7 @@ class Container extends Component
      * // register an interface
      * // When a class depends on the interface, the corresponding class
      * // will be instantiated as the dependent object
-     * $container->set('yii\mail\MailInterface', 'yii\swiftmailer\Mailer');
+     * $container->set('yii\mails\MailInterface', 'yii\swiftmailer\Mailer');
      *
      * // register an alias name. You can use $container->get('foo')
      * // to create an instance of Connection

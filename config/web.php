@@ -9,7 +9,13 @@ $config = [
     'language' => 'ru-RU',
     'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'app\modules\admin\Bootstrap',
+        'app\modules\main\Bootstrap',
+        'app\modules\user\Bootstrap',
+        'app\modules\news\Bootstrap',
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',

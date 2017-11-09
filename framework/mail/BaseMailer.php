@@ -24,8 +24,8 @@ use yii\web\View;
  *
  * @property View $view View instance. Note that the type of this property differs in getter and setter. See
  * [[getView()]] and [[setView()]] for details.
- * @property string $viewPath The directory that contains the view files for composing mail messages Defaults
- * to '@app/mail'.
+ * @property string $viewPath The directory that contains the view files for composing mails messages Defaults
+ * to '@app/mails'.
  *
  * @author Paul Klimov <klimov.paul@gmail.com>
  * @since 2.0
@@ -43,16 +43,16 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
     const EVENT_AFTER_SEND = 'afterSend';
 
     /**
-     * @var string|bool HTML layout view name. This is the layout used to render HTML mail body.
+     * @var string|bool HTML layout view name. This is the layout used to render HTML mails body.
      * The property can take the following values:
      *
      * - a relative view name: a view file relative to [[viewPath]], e.g., 'layouts/html'.
-     * - a [path alias](guide:concept-aliases): an absolute view file path specified as a path alias, e.g., '@app/mail/html'.
+     * - a [path alias](guide:concept-aliases): an absolute view file path specified as a path alias, e.g., '@app/mails/html'.
      * - a boolean false: the layout is disabled.
      */
     public $htmlLayout = 'layouts/html';
     /**
-     * @var string|bool text layout view name. This is the layout used to render TEXT mail body.
+     * @var string|bool text layout view name. This is the layout used to render TEXT mails body.
      * Please refer to [[htmlLayout]] for possible values that this property can take.
      */
     public $textLayout = 'layouts/text';
@@ -85,7 +85,7 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
     /**
      * @var string the directory where the email messages are saved when [[useFileTransport]] is true.
      */
-    public $fileTransportPath = '@runtime/mail';
+    public $fileTransportPath = '@runtime/mails';
     /**
      * @var callable a PHP callback that will be called by [[send()]] when [[useFileTransport]] is true.
      * The callback should return a file name which will be used to save the email message.
@@ -104,7 +104,7 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
      */
     private $_view = [];
     /**
-     * @var string the directory containing view files for composing mail messages.
+     * @var string the directory containing view files for composing mails messages.
      */
     private $_viewPath;
 
@@ -164,7 +164,7 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
      *
      * The view to be rendered can be specified in one of the following formats:
      *
-     * - path alias (e.g. "@app/mail/contact");
+     * - path alias (e.g. "@app/mails/contact");
      * - a relative view name (e.g. "contact") located under [[viewPath]].
      *
      * @param array $params the parameters (name-value pairs) that will be extracted and made available in the view file.
@@ -347,20 +347,20 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
     }
 
     /**
-     * @return string the directory that contains the view files for composing mail messages
-     * Defaults to '@app/mail'.
+     * @return string the directory that contains the view files for composing mails messages
+     * Defaults to '@app/mails'.
      */
     public function getViewPath()
     {
         if ($this->_viewPath === null) {
-            $this->setViewPath('@app/mail');
+            $this->setViewPath('@app/mails');
         }
 
         return $this->_viewPath;
     }
 
     /**
-     * @param string $path the directory that contains the view files for composing mail messages
+     * @param string $path the directory that contains the view files for composing mails messages
      * This can be specified as an absolute path or a [path alias](guide:concept-aliases).
      */
     public function setViewPath($path)
@@ -369,7 +369,7 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
     }
 
     /**
-     * This method is invoked right before mail send.
+     * This method is invoked right before mails send.
      * You may override this method to do last-minute preparation for the message.
      * If you override this method, please make sure you call the parent implementation first.
      * @param MessageInterface $message
@@ -384,8 +384,8 @@ abstract class BaseMailer extends Component implements MailerInterface, ViewCont
     }
 
     /**
-     * This method is invoked right after mail was send.
-     * You may override this method to do some postprocessing or logging based on mail send status.
+     * This method is invoked right after mails was send.
+     * You may override this method to do some postprocessing or logging based on mails send status.
      * If you override this method, please make sure you call the parent implementation first.
      * @param MessageInterface $message
      * @param bool $isSuccessful

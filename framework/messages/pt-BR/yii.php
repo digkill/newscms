@@ -29,7 +29,7 @@ return [
     '{attribute} cannot be blank.' => '"{attribute}" não pode ficar em branco.',
     '{attribute} contains wrong subnet mask.' => '{attribute} contém a máscara de sub-rede errado.',
     '{attribute} is invalid.' => '"{attribute}" é inválido.',
-    '{attribute} is not a valid email address.' => '"{attribute}" não é um endereço de e-mail válido.',
+    '{attribute} is not a valid email address.' => '"{attribute}" não é um endereço de e-mails válido.',
     '{attribute} is not a valid URL.' => '"{attribute}" não é uma URL válida.',
     '{attribute} is not in the allowed range.' => '{attribute} intervalo não permitido.',
     '{attribute} must be "{requiredValue}".' => '"{attribute}" deve ser "{requiredValue}".',
