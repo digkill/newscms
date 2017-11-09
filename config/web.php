@@ -15,6 +15,10 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
+        'authManager' => [
+            'class' => 'app\components\AuthManager',
+           // 'modelClass' => 'app\components\UserIdentity',
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'vBtqwCxrehDU-WUGEWyI1muIqFP6PSWX',
@@ -75,6 +79,10 @@ $config = [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'forceTranslation' => true,
                 ],
+                'news' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'forceTranslation' => true,
+                ],
             ],
         ],
     ],
@@ -87,6 +95,9 @@ $config = [
         ],
         'admin' => [
             'class' => 'app\modules\admin\Module',
+        ],
+        'news' => [
+            'class' => 'app\modules\news\Module',
         ],
     ],
     'params' => $params,

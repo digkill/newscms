@@ -9,6 +9,17 @@ use Yii;
 class Module extends \yii\base\Module
 {
 
+    /**
+     * @var string
+     */
+    public $defaultRole = 'user';
+    /**
+     * @var int
+     */
+    public $emailConfirmTokenExpire = 259200; // 3 days
+    /**
+     * @var int
+     */
     public $passwordResetTokenExpire = 3600;
 
     /**

@@ -237,6 +237,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             ['status', 'integer'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => array_keys(self::getStatusesArray())],
+            ['role', 'string', 'max' => 64],
         ];
     }
 
@@ -256,6 +257,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Статус',
+            'role' => Module::t('module', 'USER_ROLE'),
         ];
     }
 }

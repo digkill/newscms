@@ -13,14 +13,15 @@ class SignupForm extends Model
     public $email;
     public $password;
     public $verifyCode;
-    private $_defaultRole;
+    private $defaultRole;
+
     /**
      * @param string $defaultRole
      * @param array $config
      */
-    public function __construct($config = [])
+    public function __construct($defaultRole, $config = [])
     {
-       // $this->_defaultRole = $defaultRole;
+        $this->defaultRole = $defaultRole;
         parent::__construct($config);
     }
     /**
@@ -68,7 +69,7 @@ class SignupForm extends Model
             $user->email = $this->email;
             $user->setPassword($this->password);
             $user->status = User::STATUS_WAIT;
-           // $user->role = $this->_defaultRole;
+            $user->role = $this->defaultRole;
             $user->generateAuthKey();
             $user->generateEmailConfirmToken();
             if ($user->save()) {

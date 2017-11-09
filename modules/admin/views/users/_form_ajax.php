@@ -9,8 +9,19 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="user-form">
+<?php
+$this->registerJs(
+    '$("document").ready(function(){
+            $("#new_form").on("pjax:end", function() {
+            $.pjax.reload({container:"#payments"});  //Reload GridView
+        });
+    });'
+);
+?>
 
+
+<div class="user-form">
+    <?php yii\widgets\Pjax::begin(['id' => 'new_form']) ?>
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
@@ -33,5 +44,5 @@ use yii\widgets\ActiveForm;
     </div>
 
     <?php ActiveForm::end(); ?>
-
+    <?php yii\widgets\Pjax::end(); ?>
 </div>

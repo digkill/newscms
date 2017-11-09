@@ -12,6 +12,18 @@ use app\modules\admin\models\User;
 $this->title = Yii::t('app', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+<div class="payment-create">
+
+    <?= $this->render('_form_ajax', [
+        'model' => $model,
+    ]) ?>
+
+</div>
+<hr>
+
+
 <div class="user-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -36,11 +48,15 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'password_reset_token',
              'email:email',
             [
-                'class' => UserStatusColumn::className(),
+                'class' => \app\modules\admin\components\UserStatusColumn::className(),
                 'filter' => User::getStatusesArray(),
                 'attribute' => 'status',
             ],
-
+            [
+                'class' => RoleColumn::className(),
+                'filter' => ArrayHelper::map(Yii::$app->authManager->getRoles(), 'name', 'description'),
+                'attribute' => 'role',
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; letter-spacing: 0.1em; max-width: 7em;'],

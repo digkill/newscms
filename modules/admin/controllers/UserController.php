@@ -1,5 +1,6 @@
 <?php
 
+
 namespace app\modules\admin\controllers;
 
 use Yii;
@@ -12,7 +13,7 @@ use yii\filters\VerbFilter;
 /**
  * UserController implements the CRUD actions for User model.
  */
-class UsersController extends Controller
+class UserController extends Controller
 {
     /**
      * @inheritdoc
@@ -67,9 +68,17 @@ class UsersController extends Controller
         $model->scenario = User::SCENARIO_ADMIN_CREATE;
         $model->status = User::STATUS_ACTIVE;
 
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+
+            if (Yii::$app->request->isAjax) {
+                return $this->renderAjax('create', [
+                    'model' => $model,
+                ]);
+            }
+
             return $this->render('create', [
                 'model' => $model,
             ]);
