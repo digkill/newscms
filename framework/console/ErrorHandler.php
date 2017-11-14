@@ -18,7 +18,7 @@ use yii\helpers\Console;
  * ErrorHandler is configured as an application component in [[\yii\base\Application]] by default.
  * You can access that instance via `Yii::$app->errorHandler`.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class ErrorHandler extends \yii\base\ErrorHandler

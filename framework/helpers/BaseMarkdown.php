@@ -15,7 +15,7 @@ use yii\base\InvalidParamException;
  *
  * Do not use BaseMarkdown. Use [[Markdown]] instead.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class BaseMarkdown

@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'status')->dropDownList(User::getStatusesArray()) ?>
 
-    <?= $form->field($model, 'role')->dropDownList($rolesList) ?>
+    <?= $form->field($model, 'role')->dropDownList(\yii\helpers\ArrayHelper::map(Yii::$app->authManager->getRoles(), 'name', 'description')) ?>
 
     <div class="form-group">
         <?= Html::submitButton(

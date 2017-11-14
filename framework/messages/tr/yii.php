@@ -73,7 +73,7 @@ return [
     '{attribute} contains wrong subnet mask.' => '{attribute} yanlış alt ağ maskesi içeriyor.',
     '{attribute} is invalid.' => '{attribute} geçersiz.',
     '{attribute} is not a valid URL.' => '{attribute} geçerli bir URL değil.',
-    '{attribute} is not a valid email address.' => '{attribute} geçerli bir mail adresi değil.',
+    '{attribute} is not a valid email address.' => '{attribute} geçerli bir mails adresi değil.',
     '{attribute} is not in the allowed range.' => '{attribute} izin verilen aralıkta değil.',
     '{attribute} must be "{requiredValue}".' => '{attribute} {requiredValue} olmalı.',
     '{attribute} must be a number.' => '{attribute} sayı olmalı.',

@@ -8,12 +8,14 @@
 
 namespace app\modules\user\controllers;
 
-use app\modules\user\models\PasswordChangeForm;
-use app\modules\user\models\ProfileUpdateForm;
+use \app\modules\user\forms\PasswordChangeForm;
+use app\modules\user\forms\PasswordNewForm;
+use \app\modules\user\forms\ProfileUpdateForm;
 use app\modules\user\models\User;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use Yii;
+
 
 class ProfileController extends Controller
 {
@@ -48,6 +50,20 @@ class ProfileController extends Controller
             return $this->redirect(['index']);
         } else {
             return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    public function actionPasswordNew()
+    {
+        $user = $this->findModel();
+        $model = new PasswordNewForm($user);
+
+        if ($model->load(Yii::$app->request->post()) && $model->newPassword()) {
+            return $this->redirect(['index']);
+        } else {
+            return $this->render('passwordNew', [
                 'model' => $model,
             ]);
         }

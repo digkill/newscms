@@ -11,9 +11,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * UserController implements the CRUD actions for User model.
+ * UsersController implements the CRUD actions for User model.
  */
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * @inheritdoc
@@ -36,12 +36,14 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
+        $model = new User();
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model' => $model,
         ]);
     }
 
@@ -66,23 +68,25 @@ class UserController extends Controller
     {
         $model = new User();
         $model->scenario = User::SCENARIO_ADMIN_CREATE;
-        $model->status = User::STATUS_ACTIVE;
 
+        $model->status = User::STATUS_WAIT;
+        $model->generateAuthKey();
+        $model->generateEmailConfirmToken();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+             Yii::$app->mailer->compose(['text' => '@app/modules/user/mails/emailConfirmAdminChange'], ['user' => $model])
+                ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name])
+                ->setTo($model->email)
+                ->setSubject('Email confirmation for ' . Yii::$app->name)
+                ->send();
+
             return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-
-            if (Yii::$app->request->isAjax) {
-                return $this->renderAjax('create', [
-                    'model' => $model,
-                ]);
-            }
-
-            return $this->render('create', [
-                'model' => $model,
-            ]);
         }
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+
     }
 
     /**
@@ -96,7 +100,19 @@ class UserController extends Controller
         $model = $this->findModel($id);
         $model->scenario = User::SCENARIO_ADMIN_UPDATE;
 
+        $model->status = User::STATUS_WAIT;
+        $model->generateAuthKey();
+        $model->generateEmailConfirmToken();
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            Yii::$app->mailer->compose(['text' => '@app/modules/user/mails/emailConfirmAdminChange'], ['user' => $model])
+                ->setFrom([Yii::$app->params['supportEmail'] => Yii::$app->name])
+                ->setTo($model->email)
+                ->setSubject('Email confirmation for ' . Yii::$app->name)
+                ->send();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

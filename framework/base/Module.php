@@ -80,7 +80,7 @@ class Module extends ServiceLocator
      *
      * ```php
      * [
-     *   'account' => 'app\controllers\UserController',
+     *   'account' => 'app\controllers\UsersController',
      *   'article' => [
      *      'class' => 'app\controllers\PostController',
      *      'pageTitle' => 'something new',

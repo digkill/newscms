@@ -15,7 +15,7 @@ use yii\helpers\FileHelper;
 /**
  * PhpDocController is there to help maintaining PHPDoc annotation in class files.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @author Alexander Makarov <sam@rmcreative.ru>
  * @since 2.0
  */

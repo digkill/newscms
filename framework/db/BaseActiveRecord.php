@@ -37,7 +37,7 @@ use yii\helpers\ArrayHelper;
  * read-only.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 abstract class BaseActiveRecord extends Model implements ActiveRecordInterface

@@ -20,7 +20,7 @@ use yii\helpers\ArrayHelper;
 /**
  * Schema is the class for retrieving metadata from a CUBRID database (version 9.3.x and higher).
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Schema extends \yii\db\Schema

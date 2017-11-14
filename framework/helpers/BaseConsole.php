@@ -14,7 +14,7 @@ use yii\console\Markdown as ConsoleMarkdown;
  *
  * Do not use BaseConsole. Use [[Console]] instead.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class BaseConsole

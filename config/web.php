@@ -15,6 +15,7 @@ $config = [
         'app\modules\main\Bootstrap',
         'app\modules\user\Bootstrap',
         'app\modules\news\Bootstrap',
+        'app\modules\notification\Bootstrap',
     ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -42,7 +43,7 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mail to a file by default. You have to set
+            // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => false,
@@ -89,6 +90,10 @@ $config = [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'forceTranslation' => true,
                 ],
+                'notification' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'forceTranslation' => true,
+                ],
             ],
         ],
     ],
@@ -104,6 +109,9 @@ $config = [
         ],
         'news' => [
             'class' => 'app\modules\news\Module',
+        ],
+        'notification' => [
+            'class' => 'app\modules\notification\Module',
         ],
     ],
     'params' => $params,

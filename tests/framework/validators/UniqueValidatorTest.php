@@ -87,7 +87,7 @@ abstract class UniqueValidatorTest extends DatabaseTestCase
         $customerModel->clearErrors();
 
         $customerModel->name = 'test data';
-        $customerModel->email = ['email@mail.com', 'email2@mail.com'];
+        $customerModel->email = ['email@mails.com', 'email2@mails.com'];
         $validator->targetAttribute = ['email', 'name'];
         $validator->validateAttribute($customerModel, 'name');
         $this->assertEquals($messageError, $customerModel->getFirstError('name'));

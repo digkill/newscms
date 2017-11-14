@@ -14,7 +14,7 @@ use yii\db\Exception;
 /**
  * QueryBuilder is the query builder for CUBRID databases (version 9.3.x and higher).
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class QueryBuilder extends \yii\db\QueryBuilder

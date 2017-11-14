@@ -26,7 +26,7 @@ $config = [
         ],
         'db' => $db,
     ],
-    'admin' => [
+    /*'admin' => [
         'class' => 'app\modules\admin\Module',
         'controllerNamespace' => 'app\modules\admin\commands',
     ],
@@ -41,7 +41,7 @@ $config = [
     'news' => [
         'class' => 'app\modules\news\Module',
         'controllerNamespace' => 'app\modules\news\commands',
-    ],
+    ],*/
     'params' => $params,
     /*
     'controllerMap' => [

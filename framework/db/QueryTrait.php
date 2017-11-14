@@ -15,7 +15,7 @@ use yii\base\NotSupportedException;
  * It is supposed to be used in a class that implements the [[QueryInterface]].
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 trait QueryTrait

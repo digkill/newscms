@@ -19,7 +19,7 @@ use yii\helpers\FileHelper;
  * It will clone an extension or app repo and link the yii2 dev installation to the containted applications/extensions vendor dirs
  * to help working on yii using the application to test it.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class DevController extends Controller

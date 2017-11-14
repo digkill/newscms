@@ -67,7 +67,7 @@ use yii\base\InvalidConfigException;
  * is to be added to relational query join condition.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class ActiveQuery extends Query implements ActiveQueryInterface

@@ -2,11 +2,11 @@
 
 namespace app\modules\user\controllers;
 
-use app\modules\user\models\EmailConfirmForm;
-use app\modules\user\models\LoginForm;
-use app\modules\user\models\PasswordResetRequestForm;
-use app\modules\user\models\PasswordResetForm;
-use app\modules\user\models\SignupForm;
+use app\modules\user\forms\EmailConfirmForm;
+use app\modules\user\forms\LoginForm;
+use app\modules\user\forms\PasswordResetRequestForm;
+use app\modules\user\forms\PasswordResetForm;
+use app\modules\user\forms\SignupForm;
 use yii\base\InvalidParamException;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -110,12 +110,35 @@ class DefaultController extends Controller
 
         if ($model->confirmEmail()) {
             Yii::$app->getSession()->setFlash('success', 'Спасибо! Ваш Email успешно подтверждён.');
+
+
         } else {
             Yii::$app->getSession()->setFlash('error', 'Ошибка подтверждения Email.');
         }
 
         return $this->goHome();
     }
+
+
+    public function actionEmailConfirmAdmin($token)
+    {
+        try {
+            $model = new EmailConfirmForm($token);
+        } catch (InvalidParamException $e) {
+            throw new BadRequestHttpException($e->getMessage());
+        }
+
+        if ($model->confirmEmail()) {
+            Yii::$app->getSession()->setFlash('success', 'Спасибо! Ваш Email успешно подтверждён.');
+            return $this->redirect('/user/profile/password-new');
+
+        } else {
+            Yii::$app->getSession()->setFlash('error', 'Ошибка подтверждения Email.');
+        }
+
+        return $this->goHome();
+    }
+
 
     public function actionPasswordResetRequest()
     {

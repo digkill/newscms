@@ -14,7 +14,7 @@ use yii\helpers\FileHelper;
 /**
  * Check files for broken UTF8 and non-printable characters.
  *
- * @author Carsten Brandt <mails@cebe.cc>
+ * @author Carsten Brandt <mail@cebe.cc>
  */
 class Utf8Controller extends Controller
 {

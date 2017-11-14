@@ -67,7 +67,7 @@ return [
     '{attribute} cannot be blank.' => '{attribute} boş qoyula bilməz.',
     '{attribute} is invalid.' => '{attribute} düzgün deyil.',
     '{attribute} is not a valid URL.' => '{attribute} düzgün URL deyil.',
-    '{attribute} is not a valid email address.' => '{attribute} düzgün e-mail deyil.',
+    '{attribute} is not a valid email address.' => '{attribute} düzgün e-mails deyil.',
     '{attribute} must be "{requiredValue}".' => '{attribute} {requiredValue} olmalıdır.',
     '{attribute} must be a number.' => '{attribute} ədəd olmalıdır.',
     '{attribute} must be a string.' => '{attribute} simvol tipli olmalıdır.',

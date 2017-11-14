@@ -4,6 +4,10 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use app\modules\admin\models\User;
+use app\modules\admin\components\UserStatusColumn;
+use yii\helpers\ArrayHelper;
+use app\modules\user\widgets\backend\grid\RoleColumn;
+use yii\bootstrap\Modal;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\admin\models\UserSearch */
@@ -14,13 +18,31 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<div class="payment-create">
 
-    <?= $this->render('_form_ajax', [
+
+<?php
+Modal::begin([
+    'header' => '<h2>Hello world</h2>',
+    'toggleButton' => [
+        'label' => 'Добавить пользователя',
+        'tag' => 'button',
+        'class' => 'btn btn-success',
+    ],
+    'footer' => 'Низ окна',
+]);
+?>
+<div class="user-create">
+    <?php
+    echo $this->render('_form_ajax', [
         'model' => $model,
-    ]) ?>
-
+    ]);
+    ?>
 </div>
+<?php
+Modal::end();
+?>
+
+
 <hr>
 
 
@@ -32,7 +54,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Yii::t('app', 'Create User'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
+
+    <?php Pjax::begin(['id' => 'users']); ?>
+    <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -46,9 +70,9 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'email_confirm_token:email',
             // 'password_hash',
             // 'password_reset_token',
-             'email:email',
+            'email:email',
             [
-                'class' => \app\modules\admin\components\UserStatusColumn::className(),
+                'class' => UserStatusColumn::className(),
                 'filter' => User::getStatusesArray(),
                 'attribute' => 'status',
             ],
@@ -63,4 +87,4 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
-<?php Pjax::end(); ?></div>
+    <?php Pjax::end(); ?></div>

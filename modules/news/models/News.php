@@ -4,6 +4,9 @@ namespace app\modules\news\models;
 
 use app\modules\user\models\User;
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\helpers\ArrayHelper;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "news".
@@ -17,11 +20,15 @@ use Yii;
  * @property string $body
  * @property integer $author_id
  * @property integer $status
+ * @property string $image
  *
  * @property User $author
  */
 class News extends \yii\db\ActiveRecord
 {
+    public $file;
+    public $del_img;
+
     /**
      * @inheritdoc
      */
@@ -30,18 +37,43 @@ class News extends \yii\db\ActiveRecord
         return 'news';
     }
 
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
+
+    const STATUS_PUBLISHED = 1;
+    const STATUS_UNPUBLISHED = 2;
+
+    public function getStatusName()
+    {
+        return ArrayHelper::getValue(self::getStatusesArray(), $this->status);
+    }
+
+    public static function getStatusesArray()
+    {
+        return [
+            self::STATUS_PUBLISHED => 'Опубликовано',
+            self::STATUS_UNPUBLISHED => 'Не опубликована',
+        ];
+    }
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['created_at', 'updated_at', 'title', 'alias', 'notice', 'author_id'], 'required'],
+            [['title', 'alias', 'notice', 'author_id'], 'required'],
             [['created_at', 'updated_at', 'author_id', 'status'], 'integer'],
             [['notice', 'body'], 'string'],
-            [['title', 'alias'], 'string', 'max' => 255],
+            [['title', 'alias', 'image'], 'string', 'max' => 255],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
-        ];
+            [['file'], 'file', 'extensions' => 'png, jpg'],
+            [['del_img'], 'boolean'],
+            ];
     }
 
     /**
@@ -59,6 +91,7 @@ class News extends \yii\db\ActiveRecord
             'body' => Yii::t('news', 'Body'),
             'author_id' => Yii::t('news', 'Author ID'),
             'status' => Yii::t('news', 'Status'),
+            'image' => Yii::t('news', 'Image'),
         ];
     }
 

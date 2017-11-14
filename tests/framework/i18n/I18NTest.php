@@ -14,7 +14,7 @@ use yii\i18n\PhpMessageSource;
 use yiiunit\TestCase;
 
 /**
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  * @group i18n
  */

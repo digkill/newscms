@@ -17,6 +17,7 @@ class UserSearch extends Model
     public $status;
     public $created_at;
     public $updated_at;
+    public $role;
 
 
 
@@ -37,6 +38,7 @@ class UserSearch extends Model
             'username' => Yii::t('app', 'USER_USERNAME'),
             'email' => Yii::t('app', 'USER_EMAIL'),
             'status' => Yii::t('app', 'USER_STATUS'),
+            'role' => Yii::t('app', 'USER_ROLE'),
         ];
     }
 

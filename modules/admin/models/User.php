@@ -15,6 +15,10 @@ class User extends \app\modules\user\models\User
     const SCENARIO_ADMIN_CREATE = 'adminCreate';
     const SCENARIO_ADMIN_UPDATE = 'adminUpdate';
 
+    //    Событие "после добавления статьи"
+    const EVENT_AFTER_CREATE_USER = 'EVENT_AFTER_CREATE_USER';
+    const EVENT_AFTER_UPDATE_USER = 'EVENT_AFTER_UPDATE_USER';
+
     public $newPassword;
     public $newPasswordRepeat;
 
@@ -52,5 +56,13 @@ class User extends \app\modules\user\models\User
             return true;
         }
         return false;
+    }
+
+
+    public function sendNotification($event)
+    {
+
+
+
     }
 }

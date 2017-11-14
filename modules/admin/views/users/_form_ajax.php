@@ -10,10 +10,12 @@ use yii\widgets\ActiveForm;
 ?>
 
 <?php
+
+
 $this->registerJs(
     '$("document").ready(function(){
-            $("#new_form").on("pjax:end", function() {
-            $.pjax.reload({container:"#payments"});  //Reload GridView
+            $("#new_user").on("pjax:end", function() {
+            $.pjax.reload({container:"#users"});  
         });
     });'
 );
@@ -21,8 +23,9 @@ $this->registerJs(
 
 
 <div class="user-form">
-    <?php yii\widgets\Pjax::begin(['id' => 'new_form']) ?>
-    <?php $form = ActiveForm::begin(); ?>
+    <?php yii\widgets\Pjax::begin(['id' => 'new_user']) ?>
+
+    <?php $form = ActiveForm::begin([  'action' => ['/admin/users/create'], 'options' => ['data-pjax' => true]]); ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
 
@@ -34,7 +37,7 @@ $this->registerJs(
 
     <?= $form->field($model, 'status')->dropDownList(User::getStatusesArray()) ?>
 
-    <?= $form->field($model, 'role')->dropDownList($rolesList) ?>
+    <?= $form->field($model, 'role')->dropDownList(\yii\helpers\ArrayHelper::map(Yii::$app->authManager->getRoles(), 'name', 'description')) ?>
 
     <div class="form-group">
         <?= Html::submitButton(

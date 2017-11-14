@@ -25,7 +25,7 @@ namespace yii\helpers;
  * > Note: The Markdown library works with PHPDoc annotations so if you use it together with
  * > PHP `opcache` make sure [it does not strip comments](http://php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments).
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Markdown extends BaseMarkdown

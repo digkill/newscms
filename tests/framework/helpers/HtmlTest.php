@@ -1020,9 +1020,9 @@ EOD;
 
     public function testBooleanAttributes()
     {
-        $this->assertEquals('<input type="email" name="mail">', Html::input('email', 'mail', null, ['required' => false]));
-        $this->assertEquals('<input type="email" name="mail" required>', Html::input('email', 'mail', null, ['required' => true]));
-        $this->assertEquals('<input type="email" name="mail" required="hi">', Html::input('email', 'mail', null, ['required' => 'hi']));
+        $this->assertEquals('<input type="email" name="mails">', Html::input('email', 'mails', null, ['required' => false]));
+        $this->assertEquals('<input type="email" name="mails" required>', Html::input('email', 'mails', null, ['required' => true]));
+        $this->assertEquals('<input type="email" name="mails" required="hi">', Html::input('email', 'mails', null, ['required' => 'hi']));
     }
 
     public function testDataAttributes()

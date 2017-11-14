@@ -13,7 +13,7 @@ use yii\mail\BaseMessage;
 use yiiunit\TestCase;
 
 /**
- * @group mail
+ * @group mails
  */
 class BaseMessageTest extends TestCase
 {

@@ -2,11 +2,15 @@
 
 namespace app\modules\user\models;
 
+use app\modules\news\models\News;
+use app\modules\notification\models\Notification;
+use app\modules\notification\models\UserNotificationType;
 use Yii;
 use yii\base\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
+use app\modules\user\Module;
 
 
 /**
@@ -51,6 +55,30 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             self::STATUS_ACTIVE => 'Активен',
             self::STATUS_WAIT => 'Ожидает подтверждения',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNews()
+    {
+        return $this->hasMany(News::className(), ['author_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNotifications()
+    {
+        return $this->hasMany(Notification::className(), ['user_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserNotificationTypes()
+    {
+        return $this->hasMany(UserNotificationType::className(), ['user_id' => 'id']);
     }
 
     public function behaviors()

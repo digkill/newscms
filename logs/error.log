@@ -1,0 +1,91 @@
+2017/11/11 22:11:51 [error] 8729#8729: *202 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading response header from upstream, client: 127.0.0.1, server: newscms.loc, request: "POST /login HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/login"
+2017/11/11 22:11:51 [error] 8729#8729: *202 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/login"
+2017/11/11 22:12:20 [error] 8729#8729: *202 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->att" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /contact HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/"
+2017/11/11 22:12:20 [error] 8729#8729: *202 FastCGI sent in stderr: "ributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /contact HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/"
+2017/11/11 22:12:21 [error] 8729#8729: *202 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading response header from upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /main/contact/captcha?v=5a072f74dd3ec HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/contact"
+2017/11/11 22:12:28 [error] 8725#8725: *236 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(157" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /admin/users HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/contact"
+2017/11/11 22:12:28 [error] 8725#8725: *236 FastCGI sent in stderr: "5): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii...
+PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /admin/users HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc", referrer: "http://newscms.loc/contact"
+2017/11/11 22:17:57 [error] 8726#8726: *242 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(157" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /admin/users HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc"
+2017/11/11 22:17:57 [error] 8726#8726: *242 FastCGI sent in stderr: "5): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii...
+PHP message: PHP Fatal error:  Uncaught Error: Class 'app\modules\user\models\Module' not found in /home/edifanov/projects/newscms.loc/modules/user/models/User.php:259
+Stack trace:
+#0 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/db/BaseActiveRecord.php(1575): app\modules\user\models\User->attributeLabels()
+#1 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/panels/UserPanel.php(257): yii\db\BaseActiveRecord->getAttributeLabel('id')
+#2 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(56): yii\debug\panels\UserPanel->save()
+#3 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2-debug/LogTarget.php(125): yii\debug\LogTarget->export()
+#4 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Dispatcher.php(189): yii\debug\LogTarget->collect(Array, true)
+#5 /home/edifanov/projects/newscms.loc/vendor/yiisoft/yii2/log/Logger.php(177): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+  thrown in /hom" while reading upstream, client: 127.0.0.1, server: newscms.loc, request: "GET /admin/users HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.1-fpm.sock:", host: "newscms.loc"
+2017/11/12 00:53:36 [error] 8725#8725: *400 directory index of "/home/edifanov/projects/newscms.loc/web/images/thumbs/" is forbidden, client: 127.0.0.1, server: newscms.loc, request: "GET /images/thumbs/ HTTP/1.1", host: "newscms.loc", referrer: "http://newscms.loc/admin/news/update/2"
+2017/11/12 00:56:24 [error] 8726#8726: *413 directory index of "/home/edifanov/projects/newscms.loc/web/images/thumbs/" is forbidden, client: 127.0.0.1, server: newscms.loc, request: "GET /images/thumbs/ HTTP/1.1", host: "newscms.loc", referrer: "http://newscms.loc/admin/news/update/2"

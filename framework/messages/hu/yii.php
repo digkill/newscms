@@ -74,7 +74,7 @@ return [
   '{attribute} cannot be blank.' => '{attribute} nem lehet üres.',
   '{attribute} is invalid.' => '{attribute} érvénytelen.',
   '{attribute} is not a valid URL.' => '{attribute} nem valódi URL.',
-  '{attribute} is not a valid email address.' => '{attribute} nem valódi e-mail cím.',
+  '{attribute} is not a valid email address.' => '{attribute} nem valódi e-mails cím.',
   '{attribute} must be "{requiredValue}".' => '{attribute} értéke "{requiredValue}" kell, hogy legyen.',
   '{attribute} must be a number.' => '{attribute} csak szám lehet.',
   '{attribute} must be a string.' => '{attribute} csak szöveg lehet.',

@@ -12,7 +12,7 @@ namespace yii\helpers;
  *
  * It provides functions to convert date format patterns between different conventions.
  *
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @author Enrica Ruedin <e.ruedin@guggach.com>
  * @since 2.0
  */

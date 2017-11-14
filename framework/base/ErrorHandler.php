@@ -21,7 +21,7 @@ use yii\web\HttpException;
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Alexander Makarov <sam@rmcreative.ru>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 abstract class ErrorHandler extends Component

@@ -42,7 +42,7 @@ use yii\helpers\HtmlPurifier;
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Enrica Ruedin <e.ruedin@guggach.com>
- * @author Carsten Brandt <mail@cebe.cc>
+ * @author Carsten Brandt <mails@cebe.cc>
  * @since 2.0
  */
 class Formatter extends Component
